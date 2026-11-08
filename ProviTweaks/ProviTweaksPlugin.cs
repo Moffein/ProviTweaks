@@ -8,6 +8,8 @@ using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
+[module: UnverifiableCode]
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 
 namespace R2API.Utils
 {
@@ -17,8 +19,6 @@ namespace R2API.Utils
     }
 }
 
-[module: UnverifiableCode]
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 namespace ProviTweaks
 {
     [BepInPlugin("com.Moffein.ProviTweaks","ProviTweaks","1.0.0")]
