@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="nuget.config" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BepInEx.Analyzers" Version="1.0.*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="BepInEx.Core" Version="5.*" />
+		<PackageReference Include="RiskOfRain2.GameLibs" Version="1.5.0-r.1" />
+		<PackageReference Include="UnityEngine.Modules" Version="2021.3.33" />
+		<PackageReference Include="MMHOOK.RoR2" Version="2026.10.08">
+			<NoWarn>NU1701</NoWarn>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
