@@ -2,11 +2,20 @@
 using BepInEx.Configuration;
 using RoR2;
 using RoR2.Projectile;
+using System;
 using System.Security;
 using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
+
+namespace R2API.Utils
+{
+    [AttributeUsage(AttributeTargets.Assembly)]
+    public class ManualNetworkRegistrationAttribute : Attribute
+    {
+    }
+}
 
 [module: UnverifiableCode]
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
